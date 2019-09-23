@@ -1,0 +1,100 @@
+main {
+    width: 960px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px auto 50px 200px 200px auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas: "header . nav nav" "title title title title" "title1 . title2 ." "bp1 bp1 fp1 fp2" "bp2 bp2 fp3 fp4" "footer footer footer footer";
+}
+
+a, header, section, div, footer {
+    background: silver;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    background: silver;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+li {
+    justify-items: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    grid-area: nav;
+    align-self: center;
+}
+
+header {
+    grid-area: header;
+}
+
+.innercontainer {
+    background: none;
+    grid-area: innercontainer;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+}
+
+.title {
+    padding: 40px;
+    grid-area: title;
+}
+
+.title1 {
+    grid-area: title1;
+}
+
+.title2 {
+    grid-area: title2;
+}
+
+.bp1 {
+    grid-area: bp1;
+}
+
+.fp1 {
+    grid-area: fp1;
+}
+
+.fp2 {
+    grid-area: fp2;
+}
+
+.bp2 {
+    grid-area: bp2;
+}
+
+.fp3 {
+    grid-area: fp3;
+}
+
+.fp4 {
+    grid-area: fp4;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+}
